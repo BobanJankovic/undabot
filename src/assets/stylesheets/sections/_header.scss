@@ -1,0 +1,97 @@
+@import "../base/constants";
+@import "../abstracts/mixins";
+@import "../base/base_positions";
+
+
+// ********** GRID *************
+.header{
+  position: sticky;
+  top: 0;
+  z-index: 3;
+}
+
+.header__container {
+  position: relative;
+  padding-top: 30px !important;
+  padding-bottom: 30px !important;
+  background-color: $color-background-accent;
+}
+
+.header__container-inner {
+  @extend .ce-container-inner-width;
+  display: grid;
+  align-items: center;
+  grid-template-columns: auto 1fr 1fr;
+  justify-content: space-between;
+  grid-gap: unset;
+
+  @include until($tablet) {
+    text-align: right;
+    padding: 0 30px;
+  }
+  @include from($tablet){
+    grid-template-columns: auto auto 100px;
+  }
+}
+
+// ************* STYLE **************
+.header__logo,
+.footer__logo {
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  background: url("/src/assets/icons/icon-sun.svg") no-repeat 34px;
+  background-position: left;
+  padding: 10px 0 10px 45px;
+  font-family: $font-bold;
+  font-size: 12px;
+  @include from(450px) {
+    font-size: $font-size-logo-text;
+  }
+}
+
+.header__search-text {
+  display: none;
+  @include from(450px) {
+    display: inline;
+  }
+}
+
+.header__search-icon {
+  background: url("/src/assets/icons/icon-search.svg") no-repeat;
+  background-position: left;
+  font-family: $font-bold;
+  font-size: $font-size-logo-text;
+  padding-left: 28px;
+  background-size: 19px;
+}
+
+.active {
+  color:lightgray;
+}
+
+.slide-enter-active {
+  transition-duration: 0.4s;
+  transition-timing-function: ease-in-out;
+}
+
+.slide-leave-active {
+  transition-duration: 0.4s;
+  transition-timing-function: ease-in-out;
+}
+
+.slide-enter-to, .slide-leave {
+  max-height: 200px;
+  overflow: hidden;
+}
+
+.slide-enter, .slide-leave-to {
+  overflow: hidden;
+  max-height: 0;
+}
+
+.header__nav-desktop{
+  display: none;
+  @include from($tablet){
+    display: inline-block;
+  }
+}

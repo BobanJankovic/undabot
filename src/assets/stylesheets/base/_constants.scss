@@ -1,0 +1,73 @@
+// Main Container widths
+// We need these values to add space left and right of items which don't have 100% width
+
+// Breakpoints
+$tablet: 768px;
+$desktop: 1024px;
+$desktop-large: 1200px;
+$wide-screen: 1260px;
+$ultra-wide-screen: 1600px;
+
+
+// Margins and paddings
+$container-margin: 20px; // Used for side margins, paddings
+
+$ce-margin-vertical: 80px; // used for top and bottom margin
+$ce-margin-vertical-tablet: 80px; // used for top and bottom margin
+$ce-margin-vertical-desktop: 100px; // used for top and bottom margin
+$ce-margin-vertical-desktop-large: 100px; // used for top and bottom margin
+$ce-margin-vertical-widescreen: 100px; // used for top and bottom margin
+
+$ce-padding-vertical: 50px; // Padding e.g. for Items with background colors
+
+// Tablet view, should be at least less than $tablet + 2 * $container-margin
+$container-width-tablet: $tablet - 2 * $container-margin;
+
+// Desktop view, should be at least less than $desktop + 2 * $container-margin
+$container-width-desktop: $desktop - 2 * $container-margin;
+
+// Desktop large view, should be at least less than $desktop-large + 2 * $container-margin
+$container-width-desktop-large: $desktop-large - 2 * $container-margin;
+
+// Widescreen view, should be at least less than $wide-screen + 2 * $container-margin
+$container-width-widescreen: $wide-screen - 2 * $container-margin;
+
+// Fonts
+$font-head: 'OpenSans Bold', sans-serif;
+$font-copy: 'OpenSans Regular', sans-serif;
+$font-bold: 'OpenSans Bold', sans-serif;
+$font-semi-bold: 'OpenSans SemiBold', sans-serif;
+
+// Font sizes
+$font-size: 13px;
+$font-size-link: 14px;
+$font-size-item: 14px;
+$font-size-logo-text: 16px;
+$font-size-h1: 40px;
+$font-size-h1-mobile: 36px;
+$font-size-h2: 30px;
+$font-size-h2-mobile: 24px;
+$font-size-h3: 18px;
+$font-size-h3-mobile: 16px;
+$font-size-h4: 16px;
+$font-size-h4-mobile: 14px;
+
+// Line height
+$text-line-height: 1.6;
+$text-line-height-headline: 1.2;
+
+// Main colors
+$color-white: #fff;
+$color-black: #000;
+
+// Text colors
+$color-text-base: #666666;
+$color-text-accent: #1e5d69;
+$color-text-headline: #1e5d69;
+
+// Background colors
+$color-background-accent: #1e5d69;
+$color-background-accent-secondary: #2d4e54;
+$color-background-white: #fff;
+
+

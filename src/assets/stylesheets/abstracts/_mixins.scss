@@ -1,0 +1,72 @@
+@import "../base/constants";
+
+// Media queries
+@mixin until($width) {
+  // until ($tablet), exception for mobile query
+  @if ($width == 768) {
+    @media (max-width: $width - 1) {
+      @content;
+    }
+  }
+  @if ($width != 768) {
+    @media (max-width: $width) {
+      @content;
+    }
+  }
+}
+
+
+@mixin from($width) {
+  // from ($tablet), exception for tablet query
+  @if ($width == 768) {
+    @media (min-width: $width) {
+      @content;
+    }
+  }
+  @if ($width != 768) {
+    @media (min-width: $width + 1) {
+      @content;
+    }
+  }
+}
+
+@mixin between($from, $to) {
+  @media (min-width: $from) and (max-width: $to) {
+    @content;
+  }
+}
+
+// from 768px to 1024px
+@mixin tablet() {
+  @include between($tablet, $desktop) {
+    @content;
+  }
+}
+
+// from 1025px to 1200px
+@mixin desktop() {
+  @include between($desktop + 1, $desktop-large) {
+    @content;
+  }
+}
+
+// from 1201px to 1366px
+@mixin desktopLarge() {
+  @include between($desktop-large + 1, $wide-screen) {
+    @content;
+  }
+}
+
+// from 1367px
+@mixin widescreen() {
+  @include from($wide-screen) {
+    @content;
+  }
+}
+
+// Center background image
+@mixin centerBckg() {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}

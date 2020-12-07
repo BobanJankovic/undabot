@@ -1,0 +1,61 @@
+@import "../base/constants";
+@import "../abstracts/mixins";
+@import "../base/base_positions";
+
+.header__nav--open {
+  display: inline-block;
+}
+
+.header__nav {
+  background-color: $color-background-accent;
+  position: absolute;
+  top: 90px;
+  left: 0;
+  right: 0;
+  @include from($tablet) {
+    display: inline-block !important;
+    position: unset;
+  }
+}
+
+.header__nav-list {
+  li {
+    display: block;
+    text-align: center;
+    margin: 20px 0;
+
+    a {
+      font-family: $font-bold;
+      @include from($tablet) {
+        font-family: $font-semi-bold;
+      }
+      &:hover {
+        color: lightgray;
+        text-decoration: none;
+      }
+    }
+
+    &:last-child {
+      margin-bottom: 50px;
+      @include from($tablet) {
+        margin-bottom: 0;
+      }
+    }
+
+    @include from($tablet) {
+      text-align: left;
+      margin: 0;
+      display: inline-block;
+    }
+
+    &:not(:last-child) {
+      @include from($tablet) {
+        margin-right: 10px;
+      }
+      @include from($desktop) {
+        margin-right: 30px;
+      }
+
+    }
+  }
+}

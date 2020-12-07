@@ -1,0 +1,134 @@
+@import "constants";
+@import "../abstracts/mixins";
+
+// OpenSans Light
+@font-face {
+  font-family: 'OpenSans Light';
+  src: url('/src/assets/fonts/OpenSans/OpenSans-Light.ttf') format('truetype');
+}
+
+// OpenSans Regular
+@font-face {
+  font-family: 'OpenSans Regular';
+  src: url('/src/assets/fonts/OpenSans/OpenSans-Regular.ttf') format('truetype');
+}
+
+// OpenSans SemiBold
+@font-face {
+  font-family: 'OpenSans SemiBold';
+  src: url('/src/assets/fonts/OpenSans/OpenSans-SemiBold.ttf') format('truetype');
+}
+
+// OpenSans Bold
+@font-face {
+  font-family: 'OpenSans Bold';
+  src: url('/src/assets/fonts/OpenSans/OpenSans-Bold.ttf') format('truetype');
+}
+
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0 ;
+  padding: 0;
+}
+
+*:focus {
+  outline: none;
+}
+
+html {
+  line-height: $text-line-height;
+}
+
+body, th, td {
+  color: $color-text-base;
+  font-size: $font-size;
+  font-family: $font-copy;
+}
+
+h1, .h1 {
+  margin: 30px 0;
+  line-height: $text-line-height-headline;
+  color: $color-text-headline;
+  font-family: $font-head;
+  font-size: $font-size-h1-mobile;
+  @include from($tablet) {
+    font-size: $font-size-h1;
+  }
+
+}
+
+h2, .h2 {
+  margin: 20px 0;
+  line-height: $text-line-height-headline;
+  color: $color-text-headline;
+  font-family: $font-head;
+  font-size: $font-size-h2-mobile;
+  @include from($tablet) {
+    font-size: $font-size-h2;
+  }
+}
+
+h3, .h3 {
+  margin: 20px 0;
+  color: $color-text-headline;
+  line-height: $text-line-height-headline;
+  font-family: $font-head;
+  font-size: $font-size-h3-mobile;
+  @include from($tablet) {
+    font-size: $font-size-h3;
+  }
+}
+
+h4, .h4 {
+  margin: 10px 0;
+  color: $color-text-headline;
+  line-height: $text-line-height-headline;
+  font-family: $font-head;
+  font-size: $font-size-h4-mobile;
+  @include from($tablet) {
+    font-size: $font-size-h4;
+  }
+}
+
+
+p {
+  margin-bottom: 15px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+
+  li {
+    font-size: $font-size-item;
+    color: $color-text-accent;
+  }
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+a {
+  color: $color-white;
+  text-decoration: none;
+  cursor: pointer;
+  font-family: $font-semi-bold;
+  font-size: $font-size-link;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+
+
+
+

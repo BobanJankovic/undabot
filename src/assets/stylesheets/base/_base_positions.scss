@@ -1,0 +1,43 @@
+@import "constants";
+@import "../abstracts/mixins";
+
+.content-main {
+  // Add margin for all items for mobile view
+  // We will move full width items to the borders with negative margins
+  margin: 0 $container-margin;
+  @include from($desktop) {
+    margin: 0 auto;
+  }
+}
+
+.ce-full-width-no-margin {
+  margin-top: 0;
+  margin-bottom: 0;
+  max-width: none;
+  @include until($desktop) {
+    padding: 0 $container-margin;
+    margin-left: -$container-margin;
+    margin-right: -$container-margin;
+  }
+}
+
+.ce-container-inner-width {
+  width: auto;
+
+  @include from($tablet) {
+    margin: 0 auto;
+  }
+
+  @include tablet() {
+    max-width: $container-width-tablet;
+  }
+  @include desktop() {
+    max-width: $container-width-desktop;
+  }
+  @include desktopLarge() {
+    max-width: $container-width-desktop-large;
+  }
+  @include widescreen() {
+    max-width: $container-width-widescreen;
+  }
+}
