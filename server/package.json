@@ -1,0 +1,12 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "Server side of application",
+  "main": "index.js",
+  "author": "Boban Janković",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "expressjs": "^1.0.1"
+  }
+}

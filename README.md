@@ -1,12 +1,20 @@
 Undabot
+
 A Vue.js project
 
 Build Setup
-# Install dependencies
-npm install
 
-# serve with hot reload at localhost:9000
-npm run localdev
+Install dependencies from root folder 
+#npm install
 
-# build for production with minification
-npm run prod
+Install dependencies from server folder 
+#npm install
+
+Start node server from server folder
+#node server.js
+
+Serve with hot reload at localhost:9000
+#npm run localdev
+
+Build for production with minification
+#npm run prod
