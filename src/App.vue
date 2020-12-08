@@ -4,6 +4,7 @@
         <keep-alive>
             <router-view></router-view>
         </keep-alive>
+        <Footer></Footer>
     </div>
 </template>
 
@@ -19,9 +20,16 @@
 </script>
 
 <style lang="scss">
+    $footer-height: 300px;
     body {
         margin: 0 !important;
         position: relative;
+    }
+
+    .content-main {
+        min-height: 100vh;
+        position: relative;
+        padding-bottom: $footer-height;
     }
 
     /* width */

@@ -4,6 +4,12 @@
 
 
 // ********** GRID *************
+.footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
 .footer__container--top {
   @extend .ce-full-width-no-margin;
   background-color: $color-background-accent;
