@@ -1,0 +1,74 @@
+@import "../base/constants";
+@import "../abstracts/mixins";
+@import "../base/base_positions";
+
+
+// ********** GRID *************
+.contact__form-wrapper {
+  @extend .ce-container-inner-width;
+}
+
+// ************* STYLE **************
+.contact__form-wrapper {
+  label {
+    display: block;
+    color: $color-text-accent;
+    text-transform: uppercase;
+    font-family: $font-semi-bold;
+    margin-bottom: 5px;
+    font-size: $font-size;
+  }
+
+  h2 {
+    text-align: center;
+  }
+}
+
+.contact__form-wrapper-inner {
+  margin-top: 60px;
+
+  border-radius: 5px;
+
+  input[type="submit"] {
+    border: none;
+    display: inline-block;
+    padding: 15px 60px;
+    background-image: $color-background-btn-default;
+    border-radius: 30px;
+    color: $color-white;
+    font-size: $font-copy;
+    font-family: $font-semi-bold;
+    text-transform: uppercase;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  @include from($tablet) {
+    padding: 0 50px;
+  }
+
+  @include from($desktop) {
+    padding: 0 80px;
+  }
+
+  @include from($desktop-large) {
+    padding: 0 160px;
+  }
+}
+
+.contact__form-container {
+  margin-bottom: 25px;
+
+  input, textarea {
+    width: 100%;
+    padding: 20px;
+    border-radius: 5px;
+    border: none;
+    background-color: lightgrey;
+    color: $color-text-accent;
+    font-size: $font-copy;
+    font-family: $font-semi-bold;
+  }
+}
