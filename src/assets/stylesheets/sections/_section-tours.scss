@@ -1,0 +1,109 @@
+@import "../base/constants";
+@import "../abstracts/mixins";
+@import "../base/base_positions";
+
+
+// ********** GRID *************
+.sectionTours__container {
+  @extend .ce-full-width-no-margin;
+  background-color: $color-white;
+}
+
+.sectionTours__container-inner {
+  @extend .ce-container-inner-width;
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+
+.sectionTours__item-wrap {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-row-gap: 40px;
+
+  @include from(600px) {
+    padding: 0 100px;
+  }
+  @include from($desktop) {
+    padding: 0;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 40px;
+  }
+  @include from($desktop-large) {
+    grid-column-gap: 80px;
+  }
+}
+
+.sectionTours__headline-wrap {
+  text-align: center;
+  padding-bottom: 30px;
+  @include from($desktop) {
+    padding-bottom: 65px;
+  }
+}
+
+// ************* STYLE **************
+.sectionTours__item {
+  text-align: center;
+  -webkit-box-shadow: 0px 8px 10px -2px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 8px 10px -2px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 8px 10px -2px rgba(0, 0, 0, 0.75);
+}
+
+.sectionTours__item-image {
+  clip-path: polygon(0 0, 100% 0, 100% 87%, 0 98%);
+}
+
+.sectionTours__headline {
+  text-transform: uppercase;
+  margin: 0;
+  color: $color-text-accent;
+}
+
+.sectionTours__item-headline {
+  text-transform: uppercase;
+  margin: 10px 0 30px 0;
+}
+
+.sectionTours__item-content {
+  padding: 10px 50px 35px 50px;
+}
+
+.sectionTours__item-list {
+  li {
+    padding: 10px 0;
+    border-bottom: 1px solid transparent;
+  }
+}
+
+.sectionTours__button {
+  text-align: center;
+  padding-top: 70px;
+}
+
+.sectionTours__button--link {
+  display: inline-block;
+  padding: 20px 40px;
+  background-image: $color-background-btn-default;
+  border-radius: 30px;
+  text-transform: uppercase;
+}
+
+.sectionTours__item--link {
+  display: inline-block;
+  height: 100%;
+
+  &:hover {
+    transition: all 0.2s;
+    cursor: pointer;
+    background-color: $color-background-accent;
+    text-decoration: none;
+
+    * {
+      color: $color-white;
+    }
+
+    li:not(:last-child) {
+      border-bottom: 1px solid $color-white;
+    }
+  }
+}

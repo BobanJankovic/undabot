@@ -1,0 +1,55 @@
+@import "../base/constants";
+@import "../abstracts/mixins";
+@import "../base/base_positions";
+
+
+// ********** GRID *************
+.sectionAbout__container {
+  @extend .ce-full-width-no-margin;
+}
+
+.sectionAbout__container-inner {
+  @extend .ce-container-inner-width;
+}
+
+.sectionAbout__headline-wrap {
+  text-align: center;
+  padding: 30px 0;
+  @include from($desktop) {
+    padding: 65px;
+  }
+}
+
+.sectionAbout__headline {
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.sectionAbout__content {
+  @extend .ce-container-inner-width;
+  display: grid;
+  grid-column-gap: 40px;
+  grid-row-gap: 40px;
+  grid-template-columns: 1fr;
+  @include from($desktop) {
+    grid-template-columns: 1fr 1fr;
+  }
+  @include from($desktop-large) {
+    grid-template-columns: 1fr 600px;
+  }
+}
+
+.sectionAbout__text-container:first-child {
+  margin-bottom: 30px;
+  @include from($desktop) {
+    margin-bottom: 60px;
+  }
+}
+
+
+// ************* STYLE **************
+.sectionAbout__text {
+  h3 {
+    margin-top: 0;
+  }
+}

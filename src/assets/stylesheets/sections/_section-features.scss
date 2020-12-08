@@ -1,0 +1,93 @@
+@import "../base/constants";
+@import "../abstracts/mixins";
+@import "../base/base_positions";
+
+
+// ********** GRID *************
+.sectionFeatures__container {
+  @extend .ce-full-width-no-margin;
+  background-image: $color-background-section-features, url("/src/assets/icons/images/img-bg-adventure.jpg");
+  @include centerBckg;
+  clip-path: polygon(0 4%, 100% 0, 100% 96%, 0 100%);
+  @include from($desktop-large) {
+    clip-path: polygon(0 14%, 100% 0, 100% 86%, 0 100%);
+  }
+}
+
+.sectionFeatures__container-inner {
+  @extend .ce-container-inner-width;
+  margin-top: 50px;
+  padding-top: 70px;
+  padding-bottom: 70px;
+  @include from($desktop) {
+    margin-top: 70px;
+  }
+  @include from($desktop-large) {
+    padding: 160px 0;
+  }
+}
+
+.sectionFeatures__item-wrap {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-row-gap: 20px;
+  @include from($tablet) {
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 40px;
+    grid-row-gap: 40px;
+  }
+  @include from($desktop-large) {
+    grid-column-gap: 80px;
+    grid-row-gap: 80px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+.sectionFeatures__headline-wrap {
+  text-align: center;
+  padding-bottom: 30px;
+  @include from($desktop) {
+    padding-bottom: 65px;
+  }
+}
+
+// ************* STYLE **************
+.sectionFeatures__item {
+  text-align: center;
+  padding: 35px 25px 25px 25px;
+  background-color: $color-white;
+}
+
+.sectionFeatures__headline {
+  text-transform: uppercase;
+  margin: 0;
+  color: $color-white;
+}
+
+.sectionFeatures__item-headline {
+  text-transform: uppercase;
+  margin: 20px 0 20px 0;
+}
+
+.sectionFeatures__item-icon--airplane {
+  background: url("/src/assets/icons/icon-airplane.svg");
+}
+
+.sectionFeatures__item-icon--earth {
+  background: url("/src/assets/icons/icon-earth.svg");
+}
+
+.sectionFeatures__item-icon--compass {
+  background: url("/src/assets/icons/icon-compass.svg");
+}
+
+.sectionFeatures__item-icon--heart {
+  background: url("/src/assets/icons/icon-heart.svg");
+}
+
+.sectionFeatures__item-icon {
+  width: 52px;
+  height: 52px;
+  display: inline-block;
+  @include centerBckg;
+}

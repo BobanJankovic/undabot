@@ -1,0 +1,103 @@
+@import "../base/constants";
+@import "../abstracts/mixins";
+@import "../base/base_positions";
+
+
+// ********** GRID *************
+.footer__container--top {
+  @extend .ce-full-width-no-margin;
+  background-color: $color-background-accent;
+}
+
+.footer__container-inner--top {
+  @extend .ce-container-inner-width;
+  text-align: center;
+  padding-top: 70px;
+  padding-bottom: 40px;
+}
+
+.footer__container--bottom {
+  @extend .ce-full-width-no-margin;
+  background-color: $color-background-accent-secondary;
+}
+
+.footer__container-inner--bottom {
+  @extend .ce-container-inner-width;
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: space-between;
+  padding: 25px 0;
+  align-items: center;
+}
+
+
+// ************* STYLE **************
+.footer__copyrights {
+  color: $color-white;
+  font-family: $font-copy;
+}
+
+.footer__icons {
+  margin-top: 40px;
+}
+
+.footer__logo {
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  background: url("/src/assets/icons/icon-sun.svg") no-repeat 34px;
+  background-position: left;
+  padding: 10px 0 10px 45px;
+  font-family: $font-bold;
+  font-size: 12px;
+  @include from(450px) {
+    font-size: $font-size-logo-text;
+  }
+}
+
+.footer__twitter {
+  width: 32px;
+  height: 32px;
+  display: inline-block;
+  margin-right: 40px;
+  border-radius: 100%;
+  background: url("/src/assets/icons/icon-twitter.svg");
+  background-color: $color-white;
+  @include centerBckg;
+  background-size: 20px;
+}
+
+.footer__facebook {
+  width: 32px;
+  border-radius: 100%;
+  height: 32px;
+  display: inline-block;
+  background: url("/src/assets/icons/icon-facebook.svg");
+  background-color: $color-white;
+  @include centerBckg;
+  background-size: 20px;
+}
+
+.footer__instagram {
+  border-radius: 100%;
+  width: 32px;
+  height: 32px;
+  display: inline-block;
+  margin-right: 40px;
+  background: url("/src/assets/icons/icon-instagram.svg");
+  background-color: $color-white;
+  @include centerBckg;
+  background-size: 20px;
+}
+
+.footer__nav-list {
+  li {
+    margin: 0;
+    display: inline-block;
+
+    &:not(:last-child) {
+      @include from($desktop) {
+        margin-right: 30px;
+      }
+    }
+  }
+}

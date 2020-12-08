@@ -10,7 +10,7 @@ $ultra-wide-screen: 1600px;
 
 
 // Margins and paddings
-$container-margin: 20px; // Used for side margins, paddings
+$container-margin: 30px; // Used for side margins, paddings
 
 $ce-margin-vertical: 80px; // used for top and bottom margin
 $ce-margin-vertical-tablet: 80px; // used for top and bottom margin
@@ -65,9 +65,13 @@ $color-text-base: #666666;
 $color-text-accent: #1e5d69;
 $color-text-headline: #1e5d69;
 
+
 // Background colors
 $color-background-accent: #1e5d69;
 $color-background-accent-secondary: #2d4e54;
 $color-background-white: #fff;
+$color-background-icon: #0093af;
+$color-background-section-features: linear-gradient(to bottom right, rgba(24, 157, 182, 0.5), rgba(172, 216, 225, 0.5));
+$color-background-btn-default: linear-gradient(to right, $color-background-accent, $color-background-icon);
 
 

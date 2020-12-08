@@ -11,6 +11,7 @@
 }
 
 .header__container {
+  @extend .ce-full-width-no-margin;
   position: relative;
   padding-top: 30px !important;
   padding-bottom: 30px !important;
@@ -27,7 +28,6 @@
 
   @include until($tablet) {
     text-align: right;
-    padding: 0 30px;
   }
   @include from($tablet){
     grid-template-columns: auto auto 100px;
@@ -35,8 +35,7 @@
 }
 
 // ************* STYLE **************
-.header__logo,
-.footer__logo {
+.header__logo {
   letter-spacing: 2px;
   text-transform: uppercase;
   background: url("/src/assets/icons/icon-sun.svg") no-repeat 34px;
